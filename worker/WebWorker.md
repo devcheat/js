@@ -72,4 +72,18 @@ function stopWorker() {
 }
 ```
 
+A webworker can also receive a message through `onmessage` and can respond to it. For a WebWorker it must be defiend as
+```js
+
+onmessage = function(e) {
+    console.log('Worker: Message received from main script: ' + e.data);
+    timedCount();
+}
+```
+
+
+
+
+
+
 ---
