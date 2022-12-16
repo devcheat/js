@@ -1,10 +1,11 @@
-# **HTML5 Canvas Guide**
+**HTML5 `canvas` Guide**
+===
 
-- [**HTML5 Canvas Guide**](#html5-canvas-guide)
-  - [Create a Canvas](#create-a-canvas)
+- [**HTML5 `canvas` Guide**](#html5-canvas-guide)
+  - [Create a `canvas`](#create-a-canvas)
   - [Draw a Rectangle](#draw-a-rectangle)
   - [Draw a Circle](#draw-a-circle)
-  - [Draw a Circle glow](#draw-a-circle-glow)
+  - [Draw a Circle and meke it glow](#draw-a-circle-and-meke-it-glow)
   - [Draw a line](#draw-a-line)
   - [Gradient](#gradient)
     - [Create gradient](#create-gradient)
@@ -41,10 +42,10 @@
     - [HTML canvas `globalAlpha` Property](#html-canvas-globalalpha-property)
   - [HTML canvas `globalCompositeOperation` Property](#html-canvas-globalcompositeoperation-property)
 
-## Create a Canvas
+## Create a `canvas`
 Drawing the canvas in html, just add the canvas element
 ``` html
-<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+<canvas id="mc01" width="200" height="100" style="border:1px solid #000000;">
 Your browser does not support the canvas element.
 </canvas>
 ```
@@ -52,12 +53,12 @@ Your browser does not support the canvas element.
 ## Draw a Rectangle
 drawing a rectangle
 ``` html
-<canvas id="myCanvasRec" width="200" height="100" style="border:1px solid #c3c3c3;">
+<canvas id="mc02" width="200" height="100" style="border:1px solid #c3c3c3;">
         Your browser does not support the canvas element.
 </canvas>
 
 <script>
-    var canvas = document.getElementById("myCanvasRec");
+    var canvas = document.getElementById("mc02");
     var ctx = canvas.getContext("2d");
     ctx.fillStyle = "#FF0000";
     ctx.fillRect(0, 0, 150, 75);
@@ -68,11 +69,11 @@ drawing a rectangle
 Define a circle with the arc() method. Then use the stroke() method to actually draw the circle:
 
 ``` html
-<canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">
+<canvas id="mc03" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">
         Your browser does not support the HTML5 canvas tag.
 </canvas>
 <script>
-    var c = document.getElementById("myCanvas3");
+    var c = document.getElementById("mc03");
     var canvOK = 1;
     try {
         c.getContext("2d");
@@ -92,15 +93,15 @@ Define a circle with the arc() method. Then use the stroke() method to actually 
 
 ```
 
-## Draw a Circle glow
+## Draw a Circle and meke it glow
 Use the shadow attribute for blur
 ``` html
-<canvas id="myCanvas3g" width="400" height="200" 
+<canvas id="mc04" width="400" height="200" 
 style="border:1px solid #d3d3d3;background:#ffffff;">
         Your browser does not support the HTML5 canvas tag.
 </canvas>
 <script>
-var c = document.getElementById("myCanvas3g");
+var c = document.getElementById("mc04");
 var canvOK = 1;
 try {
     c.getContext("2d");
@@ -137,12 +138,12 @@ if (canvOK == 1) {
 ## Draw a line
 Use the `lineTo()` function to draw
 ``` html
-<canvas id="myCanvasline" width="200" height="100" style="border:1px solid #d3d3d3;">
+<canvas id="mc05" width="200" height="100" style="border:1px solid #d3d3d3;">
         Your browser does not support the canvas element.
 </canvas>
 
 <script>
-    var canvas = document.getElementById("myCanvasline");
+    var canvas = document.getElementById("mc05");
     var ctx = canvas.getContext("2d");
     ctx.moveTo(0, 0);
     ctx.lineTo(200, 100);
@@ -163,12 +164,12 @@ The addColorStop() method specifies the color stops, and its position along the 
 To use the gradient, set the fillStyle or strokeStyle property to the gradient, then draw the shape (rectangle, text, or a line).
 
 ### Create gradient
-``` html
-<canvas id="myCanvasgra" width="200" height="100" style="border:1px solid #d3d3d3;">
+```html
+<canvas id="mc06" width="200" height="100" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-    var c = document.getElementById("myCanvasgra");
+    var c = document.getElementById("mc06");
     var ctx = c.getContext("2d");
 
     // Create gradient
@@ -183,13 +184,12 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 ```
 
 ### Create radial gradient
->
 ``` html
-<canvas id="myCanvasgr2" width="200" height="100" style="border:1px solid #d3d3d3;">
+<canvas id="mc07" width="200" height="100" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-    var c = document.getElementById("myCanvasgr2");
+    var c = document.getElementById("mc07");
     var ctx = c.getContext("2d");
 
     // Create gradient
@@ -205,6 +205,7 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 
  ## Drawing Text on the Canvas 
 > To draw text on a canvas, the most important property and methods are:
+
 - font - defines the font properties for the text
 - fillText(text,x,y) - draws "filled" text on the canvas
 - strokeText(text,x,y) - draws text on the canvas (no fill)
@@ -212,12 +213,12 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 ### Using `fillText(`)
 
 ``` html
-<canvas id="myCanvastx1" width="200" height="100" style="border:1px solid #d3d3d3;">
+<canvas id="mc08" width="200" height="100" style="border:1px solid #d3d3d3;">
         Your browser does not support the canvas element.
 </canvas>
 
 <script>
-    var canvas = document.getElementById("myCanvastx1");
+    var canvas = document.getElementById("mc08");
     var ctx = canvas.getContext("2d");
     ctx.font = "30px Arial";
     ctx.shadowBlur = 40;
@@ -232,12 +233,12 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 > some
 
 ``` html
-<canvas id="myCanvasst" width="200" height="100" style="border:1px solid #d3d3d3;">
+<canvas id="mc09" width="200" height="100" style="border:1px solid #d3d3d3;">
         Your browser does not support the canvas element.
 </canvas>
 
 <script>
-    var canvas = document.getElementById("myCanvasst");
+    var canvas = document.getElementById("mc09");
     var ctx = canvas.getContext("2d");
     ctx.font = "30px Arial";
     ctx.strokeText("Hello World", 10, 50);
@@ -246,12 +247,12 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 
 ### Add Color and Center Text
 ``` html
-<canvas id="myCanvasct" width="300" height="200" style="border:1px solid #d3d3d3;">
+<canvas id="mc10" width="300" height="200" style="border:1px solid #d3d3d3;">
         Your browser does not support the canvas element.
 </canvas>
 
 <script>
-        var canvas = document.getElementById("myCanvasct");
+        var canvas = document.getElementById("mc10");
         var ctx = canvas.getContext("2d");
         ctx.font = "30px Comic Sans MS";
         ctx.fillStyle = "red";
@@ -264,11 +265,11 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 ### HTML canvas `shadowOffsetY` Property
 > Draw a rectangle with a shadow placed 20 pixels below the rectangle's top position:
 ``` html
-<canvas id="myCanvassy" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc11" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvassy");
+        var c = document.getElementById("mc11");
         var ctx = c.getContext("2d");
         ctx.shadowBlur = 10;
         ctx.shadowOffsetY = 20;
@@ -280,11 +281,11 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 
 ### HTML canvas `shadowOffsetX` Property
 ``` html
-<canvas id="myCanvassx" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc12" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvassx");
+        var c = document.getElementById("mc12");
         var ctx = c.getContext("2d");
         ctx.shadowBlur = 10;
         ctx.shadowOffsetX = 20;
@@ -296,11 +297,11 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 
 ### HTML canvas `shadowColor` Property
 ``` html
-<canvas id="myCanvasshc" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc13" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvasshc");
+        var c = document.getElementById("mc13");
         var ctx = c.getContext("2d");
         ctx.shadowBlur = 20;
         ctx.fillStyle = "red";
@@ -315,11 +316,11 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 
 ### HTML canvas `shadowBlur` Property
 ``` html
-<canvas id="myCanvassb" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc14" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvassb");
+        var c = document.getElementById("mc14");
         var ctx = c.getContext("2d");
         ctx.shadowBlur = 20;
         ctx.shadowColor = "black";
@@ -330,11 +331,11 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 
 ## HTML canvas `lineJoin` Property
 ``` html
-<canvas id="myCanvaslj" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc15" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvaslj");
+        var c = document.getElementById("mc15");
         var ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.lineWidth = 10;
@@ -349,11 +350,11 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 ## HTML canvas `lineCap` Property
 > The three different line caps
 ``` html
-<canvas id="myCanvaslc" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc16" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-    var c = document.getElementById("myCanvaslc");
+    var c = document.getElementById("mc16");
     var ctx = c.getContext("2d");
 
     ctx.beginPath();
@@ -379,11 +380,11 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 
 ## HTML canvas `rect()` Method
 ``` html
-<canvas id="myCanvascr" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc17" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvascr");
+        var c = document.getElementById("mc17");
         var ctx = c.getContext("2d");
         ctx.rect(20, 20, 150, 100);
         ctx.stroke();
@@ -392,11 +393,11 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 
 ## HTML canvas `clearRect()` Method
 ``` html
-<canvas id="myCanvasdr" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc18" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvasdr");
+        var c = document.getElementById("mc18");
         var ctx = c.getContext("2d");
         ctx.fillStyle = "red";
         ctx.fillRect(0, 0, 300, 150);
@@ -406,11 +407,11 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 
 ## HTML canvas `strokeRect()` Method
 ``` html
-<canvas id="myCanvassr" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc19" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvassr");
+        var c = document.getElementById("mc19");
         var ctx = c.getContext("2d");
         ctx.strokeRect(20, 20, 150, 100);
 </script>
@@ -418,11 +419,11 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 
 ## HTML canvas `fillRect()` Method
 ``` html
-<canvas id="myCanvasfr" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc20" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvasfr");
+        var c = document.getElementById("mc20");
         var ctx = c.getContext("2d");
         ctx.fillRect(20, 20, 150, 100);
 </script>
@@ -430,11 +431,11 @@ To use the gradient, set the fillStyle or strokeStyle property to the gradient, 
 
 ## HTML canvas `beginPath()` Method
 ``` html
-<canvas id="myCanvasbp" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc21" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-    var c = document.getElementById("myCanvasbp");
+    var c = document.getElementById("mc21");
     var ctx = c.getContext("2d");
 
     ctx.beginPath();
@@ -472,11 +473,11 @@ End point: quadraticCurveTo(20,100,200,20)
 | `y`         | The y-coordinate of the ending point         |
 
 ``` html
-<canvas id="myCanvasqbc" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc22" width="300" height="150" style="border:1px solid #d3d3d3;">
                 Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-    var c = document.getElementById("myCanvasqbc");
+    var c = document.getElementById("mc22");
     var ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.moveTo(20, 20);
@@ -487,11 +488,11 @@ End point: quadraticCurveTo(20,100,200,20)
 
 ## HTML canvas `bezierCurveTo()` Method
 ``` html
-        <canvas id="myCanvascbc" width="300" height="150" style="border:1px solid #d3d3d3;">
+        <canvas id="mc23" width="300" height="150" style="border:1px solid #d3d3d3;">
                 Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-    var c = document.getElementById("myCanvascbc");
+    var c = document.getElementById("mc23");
     var ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.moveTo(20, 20);
@@ -511,11 +512,11 @@ Create an arc between two tangents on the canvas:</p>
             | y2        | The y-coordinate of the second tangent |
             | r         | The radius of the arc                  |
 ``` html
-<canvas id="myCanvasat" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc24" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvasat");
+        var c = document.getElementById("mc24");
         var ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.moveTo(20, 20); // Create a starting point
@@ -528,11 +529,11 @@ Create an arc between two tangents on the canvas:</p>
 
 ## HTML canvas` isPointInPath()` Method
 ``` html
-<canvas id="myCanvasptp" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc25" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvasptp");
+        var c = document.getElementById("mc25");
         var ctx = c.getContext("2d");
         ctx.rect(20, 20, 150, 100);
         if (ctx.isPointInPath(20, 50)) {
@@ -549,11 +550,11 @@ Note: If you scale a drawing, all future drawings will also be scaled. The posit
 drawings will be positioned twice as far from the left and top of the canvas as you specify.
 
 ``` html        
-<canvas id="myCanvassc" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc26" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvassc");
+        var c = document.getElementById("mc26");
         var ctx = c.getContext("2d");
 
         ctx.strokeRect(5, 5, 25, 15);
@@ -566,11 +567,11 @@ drawings will be positioned twice as far from the left and top of the canvas as 
 > To calculate from degrees to radians: degrees*Math.PI/180. Example: to rotate 5 degrees, specify the following: 5x*Math.PI/180
 
 ``` html
-<canvas id="myCanvasrt" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc27" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvasrt");
+        var c = document.getElementById("mc27");
         var ctx = c.getContext("2d");
         ctx.rotate(20 * Math.PI / 180);
         ctx.fillRect(50, 20, 100, 50);
@@ -579,11 +580,11 @@ drawings will be positioned twice as far from the left and top of the canvas as 
 ### HTML canvas `transform()` Method
 Notice that each time you call transform(), it builds on the previous transformation matrix:
 ``` html
-<canvas id="myCanvastrn" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc28" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvastrn");
+        var c = document.getElementById("mc28");
         var ctx = c.getContext("2d");
 
         ctx.fillStyle = "yellow";
@@ -603,11 +604,11 @@ Notice that each time you call transform(), it builds on the previous transforma
 Draw a rectangle in position (10,10), set new (0,0) position to (70,70). Draw same rectangle again (notice that the rectangle
                 now starts in position (80,80):
 ``` html
-<canvas id="myCanvastfr" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc29" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvastfr");
+        var c = document.getElementById("mc29");
         var ctx = c.getContext("2d");
         ctx.fillRect(10, 10, 100, 50);
         ctx.translate(70, 70);
@@ -619,11 +620,11 @@ Draw a rectangle in position (10,10), set new (0,0) position to (70,70). Draw sa
 Create a red line in position 150. Position 150 is the anchor point for all the text defined in the example below. Study the effect of each textAlign property value:
 
 ``` html
-<canvas id="myCanvastap" width="300" height="200" style="border:1px solid #d3d3d3;">
+<canvas id="mc30" width="300" height="200" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvastap");
+        var c = document.getElementById("mc30");
         var ctx = c.getContext("2d");
 
         // Create a red line in position 150
@@ -650,11 +651,11 @@ Create a red line in position 150. Position 150 is the anchor point for all the 
 
 ### HTML canvas `textBaseline` Property
 ``` html
-<canvas id="myCanvastbp" width="400" height="200" style="border:1px solid #d3d3d3;">
+<canvas id="mc31" width="400" height="200" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvastbp");
+        var c = document.getElementById("mc31");
         var ctx = c.getContext("2d");
 
         //Draw a red line at y=100
@@ -680,11 +681,11 @@ Create a red line in position 150. Position 150 is the anchor point for all the 
 ```
 ### HTML canvas `fillText()` Method
 ``` html
-<canvas id="myCanvasft" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc32" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvasft");
+        var c = document.getElementById("mc32");
         var ctx = c.getContext("2d");
 
         ctx.font = "20px Georgia";
@@ -704,11 +705,11 @@ Create a red line in position 150. Position 150 is the anchor point for all the 
 
 ### HTML canvas `globalAlpha` Property
 ``` html
-<canvas id="myCanvasga" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="mc33" width="300" height="150" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-        var c = document.getElementById("myCanvasga");
+        var c = document.getElementById("mc33");
         var ctx = c.getContext("2d");
         ctx.fillStyle = "red";
         ctx.fillRect(20, 20, 75, 50);
@@ -758,3 +759,4 @@ Create a red line in position 150. Position 150 is the anchor point for all the 
     }
 </script>
 ```
+---
