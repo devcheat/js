@@ -3,6 +3,7 @@
 
 - [Static members in JavaScript](#static-members-in-javascript)
   - [Static methods in JavaScript :](#static-methods-in-javascript-)
+  - [Static methods in class](#static-methods-in-class) 
 ***
 What is the difference between static member and instance member and when to use one over the other
 
@@ -61,3 +62,44 @@ document.write("Shape.Count = " + Shape.ShowCount());
 ```
 
 Since we have created 3 shapes, the output will be 3.
+
+
+# Static methods in class
+- Static class methods are defined on the class itself.
+> You cannot call a static method on an object, only on an object class.
+
+```js
+class Car {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello() {
+    return "Hello!!";
+  }
+}
+
+let myCar = new Car("Ford");
+
+// You can call 'hello()' on the Car Class:
+document.getElementById("demo").innerHTML = Car.hello();
+
+// But NOT on a Car Object:
+// document.getElementById("demo").innerHTML = myCar.hello();
+// this will raise an error.
+```
+
+If you want to use the myCar object inside the static method, you can send it as a parameter:
+
+Example
+```js
+class Car {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello(x) {
+    return "Hello " + x.name;
+  }
+}
+let myCar = new Car("Ford");
+document.getElementById("demo").innerHTML = Car.hello(myCar);
+```
