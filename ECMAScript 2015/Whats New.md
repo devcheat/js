@@ -1110,5 +1110,20 @@ let f = 0b111;
 console.log(f); // 7
 ```
 
+# Modules
+Modules are imported in two differen ways:
+
+## Import from named exports
+
+```js
+import { name, age } from "./person.js";
+```
+## Import from default exports
+Import a default export from the file message.js:
+```js
+import message from "./message.js";
+```
+
+---
 
 ***

@@ -14,6 +14,7 @@
 # What's new in ECMAScript 2016 / ES7
 
 > **ES7 ES2016 relesaed on June 2016**
+
 >  **ECMAScript 7** is also known as **ES7** and **ECMAScript 2016**.
 
 The following are the most important features of ES6.
